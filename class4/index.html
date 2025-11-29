@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Class 4</title>
+  </head>
+  <body>
+    <h1>Class 4</h1>
+    <!-- <a href="https://www.w3schools.com/tags/att_input_type_image.asp"><img src="https://www.w3schools.com/images/img_bw2_160.webp" alt=""></a> -->
+    <form>
+      <div>
+        <input
+          type="text"
+          placeholder="Enter your name"
+          value="ali@gmail.com"
+          disabled
+        />
+        <input
+          type="text"
+          placeholder="Enter your name"
+          value="ali@gmail.com"
+          readonly
+        />
+      </div>
+      <!-- <br> -->
+      <div>
+        <!-- <input type="email" placeholder="Enter your email" required /> -->
+      </div>
+      <!-- <br> -->
+      <div>
+        <label for="pass">Password:</label>
+        <input
+          type="password"
+          id="pass"
+          placeholder="Enter your password"
+          minlength="8"
+          maxlength="20"
+        />
+      </div>
+      <!-- <br> -->
+      <div>
+        <label for="photo">Photo:</label>
+        <input
+          type="file"
+          id="photo"
+          placeholder="Upload your photo"
+          multiple
+        />
+        <!-- <input type="file" id="photo" multiple accept="image/*" />
+        <input type="file" id="photo" multiple accept="video/*" />
+        <input type="file" id="photo" multiple accept="audio/*" />
+        <input type="file" id="photo" multiple accept="audio/*,video/*" />
+        <input type="file" id="photo" multiple accept=".png,.jpg,.jpeg" />
+        <input
+          type="file"
+          id="photo"
+          multiple
+          accept=".png,.jpg"
+        /> -->
+      </div>
+      <!-- <br> -->
+      <!-- <div>
+        <label for="price">Price:</label>
+        <input type="range" id="price" placeholder="Select a price range" />
+      </div>
+      <div>
+        <label for="date">Date:</label>
+        <input type="date" id="date" />
+      </div>
+      <input type="datetime-local" />
+      <input type="week" />
+      <input type="month" />
+      <input type="time" />
+      <input type="number" placeholder="Enter your age" min="18" max="32" /> -->
+      <!-- <input type="color">
+      <input type="url">
+      <input type="search">
+      <input type="tel" > -->
+      <!-- <input type="hidden" />
+      <input type="reset" />
+      <input type="submit" />
+      <input type="text" />
+      <textarea rows="10" cols="50"></textarea> -->
+      <!-- <input
+        type="image"
+        src="https://www.w3schools.com/tags/img_submit.gif"
+        alt="Submit"
+        width="48"
+        height="48"
+      /> -->
+      <!-- <br> -->
+      <!-- <button type="button">Button</button>
+      <button type="reset">Reset</button>
+      <button type="submit" disabled>Submit</button> -->
+      <!-- <button>Submit</button>  Default type is "submit" -->
+    </form>
+    <!-- <button>Submit</button>  Default type is "button" -->
+
+    <form>
+      <!-- Radio Buttons -->
+      <h3>Select Gender</h3>
+      <label>
+        <input type="radio" name="gender" value="male" />
+        Male
+      </label>
+      <label>
+        <input type="radio" name="gender" value="female" checked />
+        Female
+      </label>
+      <label>
+        <input type="radio" name="gender" value="other" />
+        Other
+      </label>
+
+      <hr />
+
+      <!-- Checkboxes -->
+      <h3>Select Your Hobbies</h3>
+      <label>
+        <input type="checkbox" name="hobbies" value="reading" checked />
+        Reading
+      </label>
+      <label>
+        <input type="checkbox" name="hobbies" value="traveling" checked />
+        Traveling
+      </label>
+      <label>
+        <input type="checkbox" name="hobbies" value="sports" />
+        Sports
+      </label>
+
+      <hr />
+
+      <!-- Select Dropdown -->
+      <h3>Select Your Country</h3>
+      <!-- <select name="country">
+        <option value="">-- Select Country --</option>
+
+        <option value="afghanistan">Afghanistan</option>
+        <option value="albania">Albania</option>
+        <option value="algeria">Algeria</option>
+        <option value="andorra">Andorra</option>
+        <option value="angola">Angola</option>
+        <option value="argentina">Argentina</option>
+        <option value="armenia">Armenia</option>
+        <option value="australia">Australia</option>
+        <option value="austria">Austria</option>
+        <option value="azerbaijan">Azerbaijan</option>
+
+        <option value="bahamas">Bahamas</option>
+        <option value="bahrain">Bahrain</option>
+        <option value="bangladesh">Bangladesh</option>
+        <option value="barbados">Barbados</option>
+        <option value="belarus">Belarus</option>
+        <option value="belgium">Belgium</option>
+        <option value="belize">Belize</option>
+        <option value="benin">Benin</option>
+        <option value="bhutan">Bhutan</option>
+        <option value="bolivia">Bolivia</option>
+
+        <option value="bosnia">Bosnia & Herzegovina</option>
+        <option value="botswana">Botswana</option>
+        <option value="brazil">Brazil</option>
+        <option value="brunei">Brunei</option>
+        <option value="bulgaria">Bulgaria</option>
+        <option value="burkina_faso">Burkina Faso</option>
+        <option value="burundi">Burundi</option>
+
+        <option value="cambodia">Cambodia</option>
+        <option value="cameroon">Cameroon</option>
+        <option value="canada">Canada</option>
+        <option value="cape_verde">Cape Verde</option>
+        <option value="central_african_republic">
+          Central African Republic
+        </option>
+        <option value="chad">Chad</option>
+        <option value="chile">Chile</option>
+        <option value="china">China</option>
+        <option value="colombia">Colombia</option>
+        <option value="comoros">Comoros</option>
+        <option value="costa_rica">Costa Rica</option>
+        <option value="croatia">Croatia</option>
+        <option value="cuba">Cuba</option>
+        <option value="cyprus">Cyprus</option>
+        <option value="czech_republic">Czech Republic</option>
+
+        <option value="denmark">Denmark</option>
+        <option value="djibouti">Djibouti</option>
+        <option value="dominican_republic">Dominican Republic</option>
+        <option value="dominica">Dominica</option>
+
+        <option value="ecuador">Ecuador</option>
+        <option value="egypt">Egypt</option>
+        <option value="el_salvador">El Salvador</option>
+        <option value="estonia">Estonia</option>
+        <option value="ethiopia">Ethiopia</option>
+
+        <option value="fiji">Fiji</option>
+        <option value="finland">Finland</option>
+        <option value="france">France</option>
+
+        <option value="gabon">Gabon</option>
+        <option value="gambia">Gambia</option>
+        <option value="georgia">Georgia</option>
+        <option value="germany">Germany</option>
+        <option value="ghana">Ghana</option>
+        <option value="greece">Greece</option>
+        <option value="grenada">Grenada</option>
+        <option value="guatemala">Guatemala</option>
+        <option value="guinea">Guinea</option>
+        <option value="guyana">Guyana</option>
+
+        <option value="haiti">Haiti</option>
+        <option value="honduras">Honduras</option>
+        <option value="hungary">Hungary</option>
+
+        <option value="iceland">Iceland</option>
+        <option value="india">India</option>
+        <option value="indonesia">Indonesia</option>
+        <option value="iran">Iran</option>
+        <option value="iraq">Iraq</option>
+        <option value="ireland">Ireland</option>
+        <option value="israel">Israel</option>
+        <option value="italy">Italy</option>
+
+        <option value="jamaica">Jamaica</option>
+        <option value="japan">Japan</option>
+        <option value="jordan">Jordan</option>
+
+        <option value="kazakhstan">Kazakhstan</option>
+        <option value="kenya">Kenya</option>
+        <option value="kiribati">Kiribati</option>
+        <option value="kuwait">Kuwait</option>
+        <option value="kyrgyzstan">Kyrgyzstan</option>
+
+        <option value="laos">Laos</option>
+        <option value="latvia">Latvia</option>
+        <option value="lebanon">Lebanon</option>
+        <option value="lesotho">Lesotho</option>
+        <option value="liberia">Liberia</option>
+        <option value="libya">Libya</option>
+        <option value="liechtenstein">Liechtenstein</option>
+        <option value="lithuania">Lithuania</option>
+        <option value="luxembourg">Luxembourg</option>
+
+        <option value="madagascar">Madagascar</option>
+        <option value="malawi">Malawi</option>
+        <option value="malaysia">Malaysia</option>
+        <option value="maldives">Maldives</option>
+        <option value="mali">Mali</option>
+        <option value="malta">Malta</option>
+        <option value="marshall_islands">Marshall Islands</option>
+        <option value="mauritania">Mauritania</option>
+        <option value="mauritius">Mauritius</option>
+        <option value="mexico">Mexico</option>
+        <option value="moldova">Moldova</option>
+        <option value="monaco">Monaco</option>
+        <option value="mongolia">Mongolia</option>
+        <option value="montenegro">Montenegro</option>
+        <option value="morocco">Morocco</option>
+        <option value="mozambique">Mozambique</option>
+        <option value="myanmar">Myanmar</option>
+
+        <option value="namibia">Namibia</option>
+        <option value="nauru">Nauru</option>
+        <option value="nepal">Nepal</option>
+        <option value="netherlands">Netherlands</option>
+        <option value="new_zealand">New Zealand</option>
+        <option value="nicaragua">Nicaragua</option>
+        <option value="niger">Niger</option>
+        <option value="nigeria">Nigeria</option>
+        <option value="north_korea">North Korea</option>
+        <option value="north_macedonia">North Macedonia</option>
+        <option value="norway">Norway</option>
+
+        <option value="oman">Oman</option>
+
+        <option value="pakistan" selected>Pakistan</option>
+        <option value="palau">Palau</option>
+        <option value="panama">Panama</option>
+        <option value="papua_new_guinea">Papua New Guinea</option>
+        <option value="paraguay">Paraguay</option>
+        <option value="peru">Peru</option>
+        <option value="philippines">Philippines</option>
+        <option value="poland">Poland</option>
+        <option value="portugal">Portugal</option>
+
+        <option value="qatar">Qatar</option>
+
+        <option value="romania">Romania</option>
+        <option value="russia">Russia</option>
+        <option value="rwanda">Rwanda</option>
+
+        <option value="saudi_arabia">Saudi Arabia</option>
+        <option value="senegal">Senegal</option>
+        <option value="serbia">Serbia</option>
+        <option value="seychelles">Seychelles</option>
+        <option value="sierra_leone">Sierra Leone</option>
+        <option value="singapore">Singapore</option>
+        <option value="slovakia">Slovakia</option>
+        <option value="slovenia">Slovenia</option>
+        <option value="somalia">Somalia</option>
+        <option value="south_africa">South Africa</option>
+        <option value="south_korea">South Korea</option>
+        <option value="south_sudan">South Sudan</option>
+        <option value="spain">Spain</option>
+        <option value="sri_lanka">Sri Lanka</option>
+        <option value="sudan">Sudan</option>
+        <option value="suriname">Suriname</option>
+        <option value="sweden">Sweden</option>
+        <option value="switzerland">Switzerland</option>
+        <option value="syria">Syria</option>
+
+        <option value="taiwan">Taiwan</option>
+        <option value="tajikistan">Tajikistan</option>
+        <option value="tanzania">Tanzania</option>
+        <option value="thailand">Thailand</option>
+        <option value="togo">Togo</option>
+        <option value="tonga">Tonga</option>
+        <option value="tunisia">Tunisia</option>
+        <option value="turkey">Turkey</option>
+        <option value="turkmenistan">Turkmenistan</option>
+        <option value="tuvalu">Tuvalu</option>
+
+        <option value="uganda">Uganda</option>
+        <option value="ukraine">Ukraine</option>
+        <option value="united_arab_emirates">United Arab Emirates</option>
+        <option value="uk">United Kingdom</option>
+        <option value="usa">United States</option>
+        <option value="uruguay">Uruguay</option>
+        <option value="uzbekistan">Uzbekistan</option>
+
+        <option value="vanuatu">Vanuatu</option>
+        <option value="vatican">Vatican City</option>
+        <option value="venezuela">Venezuela</option>
+        <option value="vietnam">Vietnam</option>
+
+        <option value="yemen">Yemen</option>
+
+        <option value="zambia">Zambia</option>
+        <option value="zimbabwe">Zimbabwe</option>
+      </select> -->
+
+      <select name="cars" id="cars">
+        <optgroup label="Swedish Cars">
+          <option value="volvo">Volvo</option>
+          <option value="saab">Saab</option>
+        </optgroup>
+        <optgroup label="German Cars">
+          <option value="mercedes">Mercedes</option>
+          <option value="audi">Audi</option>
+        </optgroup>
+      </select>
+      <br /><br />
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <form action="/action_page.php">
+      <fieldset>
+        <legend>Personal Information:</legend>
+        <label for="fname">First name:</label>
+        <input type="text" id="fname" name="fname" /><br /><br />
+        <label for="lname">Last name:</label>
+        <input type="text" id="lname" name="lname" /><br /><br />
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" /><br /><br />
+        <label for="birthday">Birthday:</label>
+        <input type="date" id="birthday" name="birthday" /><br /><br />
+      </fieldset>
+      <input type="submit" value="Submit" />
+    </form>
+    <p>My favorite color is <del>blue</del> <ins>red</ins>!</p>
+    <blockquote cite="http://www.worldwildlife.org/who/index.html">
+      For 50 years, WWF has been protecting the future of nature. The world's
+      leading conservation organization, WWF works in 100 countries and is
+      supported by 1.2 million members in the United States and close to 5
+      million globally.
+    </blockquote>
+    <p><small>This is some smaller text.</small></p>
+  </body>
+</html>
