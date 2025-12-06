@@ -1,0 +1,27 @@
+ /* dont do this thing  */
+ /* h1 {
+     background-color: rgb(231, 206, 15);
+     color: rgb(142, 25, 146);
+     border: 1px solid red;
+ }
+
+ h2 {
+     background-color: rgb(231, 206, 15);
+     color: rgb(142, 25, 146);
+     border: 1px solid red;
+ } */
+
+ /* dont do this thing  */
+
+ /* do in this way */
+ /* h1,
+ h2 {
+     background-color: rgb(231, 206, 15);
+     color: rgb(142, 25, 146);
+     border: 1px solid red;
+ } */
+ h1 {
+     background-color: rgb(15, 231, 19) !important;
+ }
+
+ /* do in this way */
