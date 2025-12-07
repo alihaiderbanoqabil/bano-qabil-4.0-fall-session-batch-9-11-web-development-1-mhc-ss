@@ -1,0 +1,269 @@
+<!-- https://cdnjs.com/ -->
+<!-- https://fontawesome.com/icons -->
+<!-- https://fonts.google.com/ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 2 of CSS</title>
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+        /* 
+        @font-face {
+            font-family: "Roboto-Black";
+            src: url("assets/fonts/Roboto/static/Roboto-Black.ttf");
+        } */
+
+        @font-face {
+            font-family: "Roboto-Black";
+            src: url("assets/fonts/Roboto-Black.ttf");
+        }
+
+        @font-face {
+            font-family: "Roboto-Light";
+            src: url("assets/fonts/Roboto-Light.ttf");
+        }
+
+        @font-face {
+            font-family: "Roboto-SemiBoldItalic";
+            src: url("assets/fonts/Roboto-SemiBoldItalic.ttf");
+        }
+
+        * {
+            /* color: red; */
+            /* border: 1px solid red; */
+            /* font-family: "Roboto", sans-serif;
+            font-family: "Roboto-SemiBoldItalic", sans-serif; */
+            /* margin: 0;
+            padding: 0; */
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+        }
+
+        h1 {
+            /* color: yellow;
+            background: red; */
+            text-shadow: 2px 3px 1px gray;
+            font-size: 50px;
+            /* font-style: italic; */
+            /* font-variant: small-caps; */
+            /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+            /* font-family: 'Courier New', Courier, monospace; */
+            /* font-family: "Roboto", sans-serif; */
+        }
+
+        a {
+            text-decoration: none;
+            text-decoration: line-through;
+            font-weight: 900;
+            /* font-family: 'Courier New', Courier, monospace; */
+        }
+
+        /* p {
+            line-height: 100px;
+        } */
+        header {
+            background-color: yellowgreen;
+            color: red;
+            padding: 16px;
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+            width: 100%;
+            /* width: calc(100% - 40px - 32px); */
+            box-sizing: border-box;
+            border: 20px solid red;
+
+        }
+
+        main {
+            margin-top: 100px;
+        }
+
+        button {
+            position: fixed;
+            bottom: 10px;
+            /* left: 10px; */
+            right: 10px;
+        }
+
+        i#eye-icon {
+            position: absolute;
+            right: 5px;
+            top: 2px;
+        }
+
+        .para {
+            border: 1px solid red;
+            background-color: cyan;
+        }
+
+        .circle {
+            /* border: 1px solid red;
+            background-color: cyan; */
+            width: 100px;
+            height: 100px;
+            border-radius: 400px;
+            border-radius: 100%;
+            text-align: center;
+            line-height: 100px;
+        }
+
+
+
+        /* div {
+            border: 1px solid red;
+            background-color: cyan;
+            width: 100px;
+            height: 100px;
+            border-radius: 400px;
+            border-radius: 100%;
+            text-align: center;
+            line-height: 100px;
+        } */
+
+        /* div.circle {
+
+        } */
+
+        /* #eye-icon {
+            position: absolute;
+            right: 5px;
+            top: 2px;
+        } */
+    </style>
+</head>
+
+<body>
+    <!-- <h1>Class 2 of CSS</h1>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem voluptates velit ipsam! Voluptas qui sequi
+        quaerat nemo. Perspiciatis nam labore tenetur ea necessitatibus vero, distinctio accusamus consequuntur quaerat
+        dolor doloribus.</p>
+    <h1 style=" font-variant: small-caps;">Class 2 of CSS</h1>
+    <a href="https://www.w3schools.com/css/default.asp">CSS</a> -->
+
+    <header>This is header</header>
+    <main>
+        <span style="position: relative;">
+            <input type="password">
+            <i class="fa-solid fa-eye" id="eye-icon"></i>
+        </span>
+        <i class="fa-regular fa-face-grin-wide" style="color: red; font-size: 50px;"></i>
+        <!-- <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel distinctio minima error vitae sint asperiores
+            obcaecati ipsum quas qui magni cupiditate, beatae natus consequuntur quis aliquam culpa quam nihil eum
+            officiis, quod a illum expedita perspiciatis. Suscipit qui fuga minus quia at iste numquam harum debitis.
+            Eveniet sunt neque ad totam, illo itaque repellendus eum libero adipisci explicabo omnis placeat odio
+            sapiente, pariatur facilis molestias perspiciatis quasi suscipit perferendis, maiores molestiae? Nemo, sunt
+            asperiores dolore eos aut vitae, voluptas ipsum commodi ipsa mollitia debitis cum quia error doloribus id
+            veritatis odio hic nostrum iste? Nihil magni repellat atque veritatis autem, numquam, fugiat quidem sapiente
+            tenetur, modi aliquid est! Provident ipsa quis iure quaerat soluta rem veritatis! Voluptate debitis enim in
+            magnam voluptatibus! Perspiciatis, architecto odio? Ad, vitae. Itaque explicabo reprehenderit aspernatur
+            voluptatum maxime vitae id veritatis natus cumque consectetur fugit, eius quod inventore numquam neque
+            laboriosam non velit blanditiis nam! Vitae voluptatibus odio, necessitatibus est distinctio voluptatem
+            suscipit doloribus obcaecati esse adipisci tempore animi repellendus nemo nisi pariatur minus vero qui harum
+            ex eveniet! Nostrum delectus eveniet saepe! Voluptatum in quis inventore adipisci minima ducimus dignissimos
+            omnis praesentium voluptate, et quod tenetur blanditiis, repellat, distinctio obcaecati molestias fugit?
+            Corporis asperiores quas blanditiis, eum dolorem reprehenderit est obcaecati delectus nemo facilis, deleniti
+            recusandae quo nostrum distinctio! Qui dolor fuga odit eius corrupti illo quisquam ut at possimus
+            reprehenderit nesciunt ipsa dolore omnis enim repellendus eos, temporibus earum, esse illum maiores
+            deserunt, debitis molestiae. Obcaecati repellat reprehenderit repellendus rem totam odit eaque. Non saepe
+            deleniti eum voluptate ullam. Non, amet. Expedita aut, animi tempora laudantium nulla ducimus minima autem,
+            sit voluptatum doloribus cupiditate rerum dolorem magnam libero deleniti eos ipsa numquam nesciunt maxime
+            commodi porro nemo quas quam. Eligendi in laudantium iste repellendus suscipit dignissimos eaque asperiores,
+            dolore doloremque esse recusandae provident. Eum dolore soluta placeat magni quasi autem molestiae quam
+            ipsam porro ratione voluptatibus laudantium hic iusto veritatis natus, similique consequatur culpa corporis
+            eaque ducimus. Eos expedita sed quis at, aut consequatur vitae error quaerat obcaecati exercitationem
+            architecto qui! Asperiores illum numquam facere nulla reiciendis laboriosam officiis ipsa neque! Molestias
+            natus voluptas sit quibusdam cupiditate est eum dolorum suscipit, temporibus labore animi rerum maxime, sed,
+            nostrum velit! Provident, vero? Vel illum culpa itaque laborum quo harum error, doloribus, architecto neque
+            eius consequuntur impedit esse eum in deleniti placeat, nulla tempora dolorem illo rem recusandae magnam
+            eaque commodi. Facilis quasi molestiae illo autem voluptates ad repellendus minima consectetur, eum ullam
+            neque eos excepturi impedit. Amet cum voluptatem neque explicabo, et doloremque aut placeat maiores iusto
+            pariatur fuga consequatur non vel architecto recusandae harum ea facilis dicta. Ad eos cumque odit, tempore
+            deserunt eligendi error facere quisquam libero, necessitatibus dignissimos fuga repellendus magnam
+            perspiciatis officia, aut quos sapiente quas facilis tempora earum provident. Adipisci cupiditate culpa est
+            maiores esse at aliquam exercitationem. Tempore fugit id dolor et totam, consequatur voluptate quibusdam
+            voluptas repellat culpa cumque iusto reiciendis? Fugiat excepturi quis omnis, soluta architecto molestias
+            quia incidunt sapiente enim temporibus laudantium deleniti iusto mollitia ab nemo id veniam, porro est aut
+            cum doloremque consequatur. Consequuntur excepturi architecto aut veritatis ea unde totam, facilis ducimus
+            perferendis laboriosam numquam odio rem tempora animi. Odio deserunt quam velit eum culpa laboriosam
+            molestiae facere ut iure aspernatur nulla eligendi soluta harum necessitatibus ex est ullam dolorum, vero
+            saepe consequatur? Placeat ab ad voluptas natus similique veniam? Perspiciatis consequatur fugiat fugit
+            recusandae numquam laboriosam suscipit quam necessitatibus qui, cum sapiente unde, voluptates neque, nemo
+            repellendus obcaecati nisi maiores quia ea? Rerum sequi maxime at delectus, incidunt dolorum totam
+            aspernatur eveniet consectetur a. Quaerat sapiente sint accusamus earum, labore ex molestias, doloremque
+            corrupti iste et iure officia mollitia vero deserunt, rerum pariatur quas perspiciatis nesciunt autem ut
+            cupiditate. Voluptate quam, nostrum odit veniam velit praesentium vel? Ducimus eligendi totam rem possimus
+            quam quod eum sequi commodi eaque quia? Sunt a, omnis hic iste autem distinctio ipsa tenetur non qui fugiat
+            quas ea beatae, nostrum numquam repellendus et alias quaerat accusantium vitae. Porro sit ea iusto
+            doloremque omnis eos cum? At voluptatum eveniet ut maxime odit ullam, aspernatur nostrum fuga et cupiditate
+            dolorum pariatur quibusdam. Voluptatibus, doloribus architecto ex odit placeat deleniti magnam consequatur,
+            facere quos aperiam aut dolorem non officia velit alias nobis corporis fugit quasi culpa impedit. Minima qui
+            aperiam suscipit est illum quis modi quibusdam, architecto sint fuga possimus necessitatibus ipsam unde
+            natus distinctio facilis beatae eveniet nihil quam. At neque, dolores consequatur dolorem ipsum minima
+            laudantium unde quasi consequuntur delectus quod, impedit ex incidunt vel cupiditate tenetur magni autem qui
+            pariatur modi totam. Nisi ducimus deserunt ullam! Consequatur quam debitis non quos commodi fugit corrupti
+            tenetur ducimus iusto aut eos ipsam mollitia recusandae asperiores excepturi sunt iste eum error
+            reprehenderit esse, ratione consectetur explicabo saepe earum. Tenetur, at dolore quaerat accusantium
+            excepturi suscipit non, ipsam quibusdam quam architecto, temporibus dolorem rerum sed corporis. Omnis,
+            cupiditate ipsa rem et harum iusto impedit sit sunt mollitia tenetur labore deleniti at quod molestias
+            obcaecati ut sint reiciendis saepe dolor dignissimos. Sed consequatur quos iure fugit laudantium deleniti
+            dolor molestiae magni ab explicabo perferendis obcaecati praesentium quisquam libero nulla vero laborum
+            dignissimos corporis ea laboriosam rem aut, veniam nemo? Beatae dicta, voluptates facere illum, officia quod
+            inventore nam ullam eaque iste nemo possimus! Dolor illum ipsum tempora voluptates ex eius, quidem fugiat et
+            optio? Numquam in suscipit cumque autem totam, commodi, doloribus nesciunt quisquam laborum vero
+            voluptatibus reiciendis distinctio natus accusamus ipsum, quo ex deleniti unde et maiores? Porro voluptates
+            omnis culpa id nam dolorem reiciendis magnam quis blanditiis? Expedita, ipsum! Quibusdam, temporibus! Nisi
+            possimus culpa nobis accusantium ex doloremque ipsum soluta aliquid eos distinctio at rem beatae, modi
+            labore quidem dolore. Modi id quam perferendis velit rerum veniam dolore earum accusantium nulla nemo iusto
+            voluptas, ipsam molestias non eaque dolorem aspernatur deserunt quaerat sequi? Sapiente, aliquid hic. Nihil,
+            temporibus natus. Est iure autem quidem impedit vero ipsum, officiis debitis dolores exercitationem at
+            doloremque recusandae id officia sunt doloribus unde sequi omnis aliquam vitae non reprehenderit sed illum
+            cupiditate delectus? Odit!</p> -->
+        <!-- <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint soluta eum exercitationem,
+            natus ipsam
+            reiciendis porro quod dignissimos repudiandae excepturi laboriosam unde nemo obcaecati magni non
+            necessitatibus aperiam odio! A?</p>
+
+        <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint soluta eum exercitationem,
+            natus ipsam
+            reiciendis porro quod dignissimos repudiandae excepturi laboriosam unde nemo obcaecati magni non
+            necessitatibus aperiam odio! A?</p>
+
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint soluta eum exercitationem, natus ipsam
+            reiciendis porro quod dignissimos repudiandae excepturi laboriosam unde nemo obcaecati magni non
+            necessitatibus aperiam odio! A?</div> -->
+
+        <div class="circle para">1</div>
+        <div class="circle para">2</div>
+        <div class="circle para">3</div>
+        <h1 class="circle para">3</h1>
+
+        <div>
+            <p class="para">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae excepturi nam laudantium omnis provident
+                vitae nobis non, neque illo iure velit officia accusamus consectetur corporis temporibus quisquam in.
+                Non,
+                iusto?</p>
+            <div>
+                <button>
+                    Scroll To Top
+                </button>
+    </main>
+</body>
+
+</html>
