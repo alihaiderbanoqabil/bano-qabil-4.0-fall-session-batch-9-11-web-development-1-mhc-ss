@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 4 of CSS</title>
+    <style>
+        /* * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        } */
+
+        /* body {
+            background-color: rgb(12, 219, 12);
+            background-color: rgba(255, 99, 71, 0.5);
+        } */
+
+        #btn1 {
+            display: none;
+            /* visibility: hidden; */
+        }
+
+        #btn2 {
+            /* visibility: hidden; */
+            opacity: 0;
+        }
+
+        #btn3 {
+            background-color: #ff00cc;
+            background-color: #f0c;
+            /* opacity: 0;
+            opacity: 1;
+            opacity: 0.5; */
+        }
+
+        /* #blueDIV {
+            margin: auto;
+            margin-top: 50px;
+            width: 200px;
+            padding: 10px;
+            background-color: lightblue;
+            box-shadow: 20px 20px 50px 10px pink;
+            box-shadow: inset 22px 27px 0px 20px pink;
+        } */
+
+        /* div p {
+            background-color: yellow;
+        } */
+
+        /* div>p {
+            background-color: yellow;
+        }
+        .container>p {
+            background-color: yellow;
+        }
+        #container>p {
+            background-color: yellow;
+        } */
+        .line-heading {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            font-weight: normal;
+        }
+
+        .line-heading::before,
+        .line-heading::after {
+            content: "";
+            flex: 1;
+            border-bottom: 10px solid #c42323;
+        }
+
+        .line-heading::before {
+            margin-right: 12px;
+        }
+
+        .line-heading::after {
+            margin-left: 12px;
+        }
+
+        /* 
+        p::first-letter {
+            font-size: 200%;
+            font-weight: bold;
+            color: #8A2BE2;
+        } */
+        p::first-line {
+            font-size: 50px;
+            font-weight: bold;
+            color: #8A2BE2;
+        }
+
+        /* p::selection {
+            color: red;
+            background: yellow;
+        } */
+
+        /* li {
+            color: cyan;
+        }
+
+        input::placeholder {
+            color: red;
+            opacity: 0.5;
+        } */
+
+        a:hover {
+            background-color: yellow;
+            font-size: 18px;
+        }
+
+        input:focus {
+            background-color: yellow;
+            border: 5px solid red;
+            outline: none;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <a href="https://www.w3schools.com">w3schools.com</a>
+    <label for="name">Name: </label><br>
+    <input id="name" name="name" type="text" />
+    <!-- 
+    <ul>
+        <li>Apple</li>
+        <li>Banana</li>
+    </ul> -->
+    <!-- <h1>Class 4 of CSS</h1> -->
+    <!-- <button id="btn1">Submit 1</button>
+    <button id="btn2">Submit 2</button>
+    <button id="btn3">Submit 3</button> -->
+
+
+    <!-- <div id="blueDIV">This is how you add a box-shadow to an element.</div> -->
+
+    <!-- <h2>Descendant Combinator (space)</h2>
+
+    <p>The descendant combinator (space) matches all elements that are descendants (children, grandchildren, etc.) of a
+        specified element.</p>
+    <p>The following example selects all p elements inside div elements:</p>
+
+    <div id="container">
+        <p>Paragraph 1 in the div.</p>
+        <p>Paragraph 2 in the div.</p>
+        <section>
+            <p>Paragraph 3 in the div.</p>
+        </section>
+    </div>
+    <div class="container">
+        <p>Paragraph 1 in the div.</p>
+        <p>Paragraph 2 in the div.</p>
+        <section>
+            <p>Paragraph 3 in the div.</p>
+        </section>
+    </div>
+
+    <p>Paragraph 4. Not in a div.</p>
+    <p>Paragraph 5. Not in a div.</p> -->
+    <!-- <h2 class="line-heading">Heading</h2> -->
+
+
+    <!-- <p>My name is Donald.</p>
+    <p>My best friend is Mickey.</p>
+    <p>We live in Duckburg.</p> -->
+
+    <!-- <input type="text" name="fname" placeholder="Type your first name here.."> -->
+
+
+</body>
+
+</html>

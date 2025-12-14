@@ -3,7 +3,7 @@
 
 <head>
     <style>
-        /* body {
+        body {
             background-color: #1e90ff;
         }
 
@@ -20,11 +20,12 @@
         .container .note {
             border: 1px solid #1e90ff;
             padding: 10px;
-        } */
+        }
 
         :root {
-            --primary-bg-color: #546905;
-            --primary-color: #c41111;
+            --primary-bg-color: #1e90ff;
+            --primary-color: #ffffff;
+            /* --border: 10px dotted rgb(255, 251, 0); */
         }
 
         body {
@@ -38,11 +39,13 @@
         }
 
         .container h2 {
-            border-bottom: 2px solid var(--primary-bg-color);
+            /* border-bottom: 2px solid var(--primary-bg-color); */
+            border-bottom: var(--border);
         }
 
         .container .note {
-            border: 1px solid var(--primary-bg-color);
+            /* border: 1px solid var(--primary-bg-color); */
+            border: var(--border, 1px solid cyan);
             padding: 10px;
         }
     </style>
