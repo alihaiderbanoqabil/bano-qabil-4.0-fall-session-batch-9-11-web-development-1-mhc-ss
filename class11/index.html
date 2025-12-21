@@ -1,0 +1,75 @@
+<!-- https://caniuse.com/ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 5 of CSS</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            background-color: lightblue;
+            width: 110px;
+            height: 110px;
+        }
+
+        div.ex5 {
+            overflow: hidden;
+        }
+
+        div {
+            width: 100px;
+            height: 100px;
+            background: red;
+            /* transition-property: width, height, background-color; */
+            transition-property: all;
+            transition-duration: 2s;
+        }
+
+        div:hover {
+            width: 300px;
+            height: 300px;
+            background-color: yellow;
+            border: 5px solid green;
+        }
+
+        div {
+            background-color: red;
+            width: 100px;
+            aspect-ratio: 3/2;
+        }
+
+        img {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            z-index: -1;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Class 5 of CSS</h1>
+    <h2>overflow: visible (default):</h2>
+    <div class="container ex5">Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Quidem exercitationem autem ipsum unde ipsam ullam voluptates quae molestiae, qui id necessitatibus consequatur.
+        Atque, at pariatur soluta praesentium minus laudantium mollitia!</div>
+
+    <div></div>
+    <div>Hello</div>
+
+    <h1>The z-index Property</h1>
+
+    <img src="w3css.gif" width="100" height="140">
+
+    <p>Because the image has a z-index of -1, it will be placed behind the text.</p>
+
+</body>
+
+</html>
