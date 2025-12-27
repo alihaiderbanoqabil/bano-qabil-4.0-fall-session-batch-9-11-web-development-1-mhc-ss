@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 7 of CSS</title>
+    <style>
+        body {
+            background-color: pink;
+            color: red;
+        }
+
+        /* @media screen and (min-width: 480px) {
+            body {
+                background-color: lightgreen;
+                color: yellow;
+            }
+
+            button {
+                display: none;
+            }
+        } */
+        /* @media not screen and (max-width: 480px) {
+            body {
+                background-color: lightgreen;
+                color: yellow;
+            }
+
+            button {
+                display: none;
+            }
+        } */
+
+        /* @media screen and (max-width: 760px) {
+            body {
+                background-color: rgb(5, 25, 90);
+                color: rgb(0, 255, 255);
+            }
+
+            button {
+                display: none;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            body {
+                background-color: lightgreen;
+                color: yellow;
+            }
+
+            button {
+                display: none;
+            }
+        } */
+
+        /* @media screen and (min-width: 480px) and (max-width: 768px) {
+            body {
+                background-color: rgb(185, 104, 10);
+            }
+        } */
+
+        @media (width >=480px) and (width <=768px) {
+            body {
+                background-color: rgb(185, 104, 10);
+            }
+        }
+
+        @media screen and (width <=300px) {
+            button {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Class 7 of CSS</h1>
+
+    <button>Submit</button>
+    <h1>Resize the browser window to see the effect!</h1>
+
+    <p>The media query is applied if the media type is screen, and the viewport width is 480px or more.</p>
+
+</body>
+
+</html>
