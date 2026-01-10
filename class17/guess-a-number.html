@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Guess the Number</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        input,
+        button {
+            padding: 8px;
+            font-size: 16px;
+        }
+
+        #message {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Guess the Number 🎯</h1>
+    <p>I am thinking of a number between <strong>1 and 100</strong></p>
+
+    <input type="number" id="guessInput" placeholder="Enter your guess">
+    <button onclick="checkGuess()">Guess</button>
+
+    <p id="message"></p>
+    <p id="attempts"></p>
+
+    <script>
+        const randomNumber = Math.floor(Math.random() * 100) + 1;
+        let attempts = 0;
+
+        function checkGuess() {
+            const userGuess = Number(document.getElementById("guessInput").value);
+            const message = document.getElementById("message");
+            const attemptsText = document.getElementById("attempts");
+
+            if (!userGuess || userGuess < 1 || userGuess > 100) {
+                message.textContent = "Please enter a number between 1 and 100.";
+                return;
+            }
+
+            attempts++;
+
+            if (userGuess === randomNumber) {
+                message.textContent = "🎉 Correct! You guessed the number!";
+                attemptsText.textContent = `Attempts: ${attempts}`;
+            } else if (userGuess < randomNumber) {
+                message.textContent = "⬆️ Too low! Try again.";
+            } else {
+                message.textContent = "⬇️ Too high! Try again.";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
