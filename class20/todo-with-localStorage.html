@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Todo App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        li {
+            margin: 8px 0;
+        }
+
+        button {
+            margin-left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Todo App (localStorage)</h2>
+
+    <input type="text" id="todoInput" placeholder="Enter todo" />
+    <button onclick="addTodo()">Add</button>
+
+    <ul id="todoList"></ul>
+
+    <script>
+        // Load todos from localStorage or start with empty array
+        let todos = JSON.parse(localStorage.getItem("todos")) || [];
+
+        // Save todos to localStorage
+        function saveTodos() {
+            localStorage.setItem("todos", JSON.stringify(todos));
+        }
+
+        // Add a todo
+        function addTodo() {
+            const input = document.getElementById("todoInput");
+            const text = input.value.trim();
+
+            if (text === "") return;
+
+            todos.push(text);
+            saveTodos();
+            input.value = "";
+            renderTodos();
+        }
+
+        // Delete a todo
+        function deleteTodo(index) {
+            todos.splice(index, 1);
+            saveTodos();
+            renderTodos();
+        }
+
+        // Render todos
+        function renderTodos() {
+            const list = document.getElementById("todoList");
+            list.innerHTML = "";
+
+            todos.forEach((todo, index) => {
+                const li = document.createElement("li");
+                li.textContent = todo;
+
+                const btn = document.createElement("button");
+                btn.textContent = "Delete";
+                btn.onclick = () => deleteTodo(index);
+
+                li.appendChild(btn);
+                list.appendChild(li);
+            });
+        }
+
+        // Initial render
+        renderTodos();
+
+    </script>
+</body>
+
+</html>
