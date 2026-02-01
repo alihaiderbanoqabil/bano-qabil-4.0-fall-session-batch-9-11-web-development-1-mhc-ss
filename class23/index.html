@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 11 of JS</title>
+</head>
+
+<body>
+    <h1>Class 11 of JS</h1>
+
+    <!-- <button onclick="createPost({
+                title: 'ashdjka',
+                body: 'asdasda',
+                userId: 1,
+            })">Create Post</button>
+    <button onclick="updatePost()">Update Post</button> -->
+    <!-- <script src="script.js"></script> -->
+
+    <div id="container">
+        <input id="search" placeholder="Search photos 1..." />
+        <input id="search" placeholder="Search photos 2..." />
+        <button>Search</button>
+
+        <div id="ali">This is my div</div>
+        <div id="photos"></div>
+    </div>
+
+    <!-- <div class="box">Box1</div>
+    <div class="box">Box2</div>
+    <div class="box">Box3</div>
+    <div class="box">Box4</div>
+    <div class="box">Box5</div>
+    <div class="box">Box6</div>
+    <div class="box">Box7</div> -->
+
+    <section class="box">This is section</section>
+    <!-- <script src="dom.js"></script> -->
+
+    <form action="#" method="post">
+
+        <fieldset>
+            <legend>Basic Inputs</legend>
+
+            <label>
+                Text:
+                <input type="text" name="text" required>
+            </label>
+
+            <label>
+                Password:
+                <input type="password" name="password" required>
+            </label>
+
+            <label>
+                Email:
+                <input type="email" name="email" readonly>
+            </label>
+
+            <label>
+                Number:
+                <input type="number" name="number" min="0" max="100">
+            </label>
+
+            <label>
+                Phone:
+                <input type="tel" name="phone">
+            </label>
+
+            <label>
+                URL:
+                <input type="url" name="website">
+            </label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Date & Time</legend>
+
+            <label>
+                Date:
+                <input type="date" name="date">
+            </label>
+
+            <label>
+                Time:
+                <input type="time" name="time">
+            </label>
+
+            <label>
+                Datetime-local:
+                <input type="datetime-local" name="datetime">
+            </label>
+
+            <label>
+                Month:
+                <input type="month" name="month">
+            </label>
+
+            <label>
+                Week:
+                <input type="week" name="week">
+            </label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Choices</legend>
+
+            <label>
+                Checkbox:
+                <input type="checkbox" name="subscribe"> Subscribe
+            </label>
+
+            <label>
+                Radio buttons:
+            </label>
+            <label>
+                <input type="radio" name="gender" value="male"> Male
+            </label>
+            <label>
+                <input type="radio" name="gender" value="female"> Female
+            </label>
+
+            <label>
+                Select dropdown:
+                <select name="country">
+                    <option value="">--Select--</option>
+                    <option value="us">USA</option>
+                    <option value="uk">UK</option>
+                    <option value="in">India</option>
+                </select>
+            </label>
+
+            <label>
+                Multiple Select:
+                <select name="skills[]" multiple>
+                    <option>HTML</option>
+                    <option>CSS</option>
+                    <option>JavaScript</option>
+                    <option>Python</option>
+                </select>
+            </label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Advanced Inputs</legend>
+
+            <label>
+                File Upload:
+                <input type="file" name="file">
+            </label>
+
+            <label>
+                Color Picker:
+                <input type="color" name="color">
+            </label>
+
+            <label>
+                Range:
+                <input type="range" name="range" min="0" max="100">
+            </label>
+
+            <label>
+                Search:
+                <input type="search" name="search">
+            </label>
+
+            <label>
+                Hidden:
+                <input type="hidden" name="hiddenValue" value="12345">
+            </label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Text Area & Buttons</legend>
+
+            <label>
+                Textarea:
+                <textarea name="message" rows="4" cols="40"></textarea>
+            </label>
+
+            <br><br>
+
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+            <input type="button" value="Custom Button">
+        </fieldset>
+
+    </form>
+    <script>
+        // console.log(document.getElementById("search"));
+        // // console.dir(document.getElementById("search"));
+        // console.log(document.getElementById("searchd"));
+        // const boxes = document.getElementsByClassName("box");
+        // const boxArray = Array.from(boxes)
+        // console.log(boxes, boxArray);
+        // console.log(document.getElementsByClassName("boxes"));
+        // // debugger
+        // console.log(document.getElementsByTagName("div"));
+        // console.log(document.getElementsByTagName("footer"));
+        // const nodeArray = document.getElementsByName("gender");
+        // const nativeArray = Array.from(nodeArray);
+        // console.log(nodeArray, nativeArray);
+
+        // console.log(document.querySelector("div"));
+        // console.log(document.querySelector("#search"));
+        // console.log(document.querySelector(".box"));
+        // console.log(document.querySelector("input[type='email']"));
+        // console.log(document.querySelector("[required]"));
+        // console.log(document.querySelector("[readonly]"));
+        // console.log(document.querySelector("div #photos"));
+        // console.log(document.querySelectorAll("div"));
+        // console.log(document.querySelectorAll("#search"));
+        // console.log(document.querySelectorAll(".box"));
+        // console.log(document.querySelectorAll("input[type='email']"));
+        // console.log(document.querySelectorAll("[required]"));
+        // console.log(document.querySelectorAll("[readonly]"));
+        // console.log(document.querySelectorAll("div #photos"));
+
+
+        // const box = document.querySelector(".box")
+        const container = document.querySelector("#container");
+        const section = document.querySelector("section");
+        container.style.backgroundColor = "yellow"
+        container.style.border = "5px solid red"
+        console.log(container.innerHTML, typeof container.innerHTML);
+        console.log(container.textContent);
+        console.log(section.textContent);
+        section.textContent = section.textContent + "This is my section"
+        //     container.innerHTML = `   
+        //     <div class="box">Box3</div>
+        // <div class="box">Box4</div>
+        // <div class="box">Box5</div>
+        // <div class="box">Box6</div>
+        // <div class="box">Box7</div>` + container.innerHTML 
+
+        // section.textContent = `   
+        //     <div class="box">Box3</div>
+        // <div class="box">Box4</div>
+        // <div class="box">Box5</div>
+        // <div class="box">Box6</div>
+        // <div class="box">Box7</div>`
+
+        section.innerHTML = `   
+        <div class="box">Box3</div>
+        <div class="box">Box4</div>
+        <div class="box">Box5</div>
+        <div class="box">Box6</div>
+        <div class="box">Box7</div>`
+
+
+    </script>
+</body>
+
+</html>
