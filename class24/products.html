@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <main class="container">
+        <h1>Loading...</h1>
+    </main>
+    <script>
+
+        window.onload = function () {
+            const main = document.querySelector("main")
+            function getAllProducts() {
+                fetch('https://fakestoreapi.com/products')
+                    .then(response => {
+                        return response.json()
+                    })
+                    .then(products => {
+                        console.log(products)
+                        renderProductsOnUI(products)
+                    })
+                    .catch((error) => {
+                        console.log(error)
+                        renderErrorOnUI(error)
+                    })
+            }
+            getAllProducts()
+            function renderErrorOnUI(error) {
+                main.innerHTML = `<div class="alert alert-danger" role="alert">${error?.message || "Something went wrong while fetching products"}</div>`
+
+            }
+
+            const renderProductsOnUI = (products) => {
+                // console.log(products, "products");
+                const productsCards = products.map((product) => {
+                    // console.log(product);
+
+                    return `<div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                <div class="card" style="width: 100%;">
+                    <img src="${product?.image}" class="card-img-top" alt="${product?.title}">
+                    <div class="card-body">
+                        <h5 class="card-title">${product?.title}</h5>
+                        <p class="card-text">${product?.description}</p>
+                        <a href="#" class="btn btn-primary">${product?.price}</a>
+                    </div>
+                </div>
+            </div>`
+                })
+
+                console.log(productsCards, "productsCards");
+
+
+                main.innerHTML = `<div class="row">${productsCards.join("")}</div>`
+            }
+        }
+
+    </script>
+</body>
+
+</html>
