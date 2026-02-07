@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 12 of JS</title>
+</head>
+
+<body>
+    <h1>Class 12 of JS</h1>
+    <!-- <form onsubmit="register(event)"> -->
+    <form>
+
+        <fieldset>
+            <legend>Basic Inputs</legend>
+
+            <label>
+                Name:
+                <input type="text" name="name" required>
+            </label>
+
+            <label>
+                Password:
+                <input type="password" name="password" required>
+            </label>
+
+            <label>
+                Email:
+                <input type="email" name="email">
+            </label>
+
+            <label>
+                Age:
+                <input type="number" name="age" min="0" max="100">
+            </label>
+
+            <label>
+                Phone:
+                <input type="tel" name="phone">
+            </label>
+
+            <label>
+                URL:
+                <input type="url" name="website">
+            </label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Date & Time</legend>
+
+            <label>
+                Date:
+                <input type="date" name="date">
+            </label>
+
+            <label>
+                Time:
+                <input type="time" name="time">
+            </label>
+
+            <label>
+                Datetime-local:
+                <input type="datetime-local" name="datetime">
+            </label>
+
+            <label>
+                Month:
+                <input type="month" name="month">
+            </label>
+
+            <label>
+                Week:
+                <input type="week" name="week">
+            </label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Choices</legend>
+
+            <label>
+                Checkbox:
+                <input type="checkbox" name="subscribe"> Subscribe
+            </label>
+
+            <label>
+                Radio buttons:
+            </label>
+            <label>
+                <input type="radio" name="gender" value="male"> Male
+            </label>
+            <label>
+                <input type="radio" name="gender" value="female"> Female
+            </label>
+
+            <label>
+                Select dropdown:
+                <select name="country">
+                    <option value="">--Select--</option>
+                    <option value="us">USA</option>
+                    <option value="uk">UK</option>
+                    <option value="in">India</option>
+                </select>
+            </label>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Advanced Inputs</legend>
+
+            <label>
+                File Upload:
+                <input type="file" name="file" multiple accept="image/png">
+            </label>
+
+            <label>
+                Color Picker:
+                <input type="color" name="color">
+            </label>
+
+            <label>
+                Range:
+                <input type="range" name="range" min="0" max="100">
+            </label>
+
+            <label>
+                Search:
+                <input type="search" name="search">
+            </label>
+
+            <label>
+                Hidden:
+                <input type="hidden" name="hiddenValue" value="12345">
+            </label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Courses</legend>
+
+            <label>
+                <input type="checkbox" name="courses" value="javascript"> JavaScript
+            </label>
+
+            <label>
+                <input type="checkbox" name="courses" value="react"> React
+            </label>
+
+            <label>
+                <input type="checkbox" name="courses" value="node"> Node.js
+            </label>
+
+            <label>
+                <input type="checkbox" name="courses" value="python"> Python
+            </label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Text Area & Buttons</legend>
+
+            <label>
+                Textarea:
+                <textarea name="message" rows="4" cols="40"></textarea>
+            </label>
+        </fieldset>
+
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+
+    </form>
+    <script>
+        function register(event) {
+            console.log(event, "event");
+            event.preventDefault();
+            const name = document.querySelector("input[name='name']")
+            const email = document.querySelector("input[name='email']")
+            const age = document.querySelector("input[name='age']")
+            const password = document.querySelector("input[name='name']")
+            const date = document.querySelector("input[name='date']")
+            const range = document.querySelector("input[name='range']")
+            const color = document.querySelector("input[name='color']")
+            const website = document.querySelector("input[name='website']")
+            const phone = document.querySelector("input[name='phone']")
+            const country = document.querySelector(`select[name="country"]`)
+            const textarea = document.querySelector("textarea[name='message']")
+            // const textarea = document.querySelector("textarea")
+            // const subscribe = document.querySelector("input[name='subscribe']");
+            const gender = document.querySelector("input[name='gender']:checked");
+            console.log(gender, "gender");
+
+            // ✅ Multiple courses
+            const courseCheckboxes = document.querySelectorAll(
+                "input[name='courses']:checked"
+            );
+            console.log(courseCheckboxes, "courseCheckboxes");
+            courseCheckboxes.value
+            const selectedCourses = [];
+            courseCheckboxes.forEach((course) => {
+                console.log(course, "course", course.value);
+
+                selectedCourses.push(course.value);
+            });
+            const file = document.querySelector("input[name='file']")
+            for (const fileObject of file.files) {
+                console.log(fileObject, "file", bytesToSize(fileObject.size));
+            }
+            const userInformation = {
+                name: name.value,
+                email: email.value,
+                password: password.value,
+                range: range.value,
+                date: date.value,
+                color: color.value,
+                country: country.value,
+                textarea: textarea.value,
+                website: website.value,
+                phone: phone.value,
+                // age: age && age.value,
+                age: age?.value, // optional chaning
+                file: file.files,
+                gender: gender.value,
+                courses: selectedCourses
+            }
+
+            console.log(userInformation, "userInformation");
+
+        }
+
+
+        function bytesToSize(bytes) {
+            if (bytes === 0) return "0 Bytes";
+
+            const k = 1024;
+            const sizes = ["Bytes", "KB", "MB", "GB", "TB", "PB"];
+            const i = Math.floor(Math.log(bytes) / Math.log(k));
+
+            return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + " " + sizes[i];
+        }
+
+        const form = document.querySelector("form");
+        const callback = (event) => {
+            event.preventDefault();
+            console.log(form, form.elements);
+
+            // Basic inputs
+            const name = form.elements["name"].value;
+            const email = form.elements["email"].value;
+            const password = form.elements["password"].value;
+            const date = form.elements["date"].value;
+            const range = form.elements["range"].value;
+            const color = form.elements["color"].value;
+            const country = form.elements["country"].value;
+            const message = form.elements["message"].value;
+            const files = form.elements["file"].files;
+
+            // Checkbox (single)
+            const subscribe = form.elements["subscribe"].checked;
+
+            // Radio button
+            const gender = form.querySelector("input[name='gender']:checked");
+            const selectedGender = gender ? gender.value : "";
+
+            // ✅ Multiple checkboxes (courses)
+            const selectedCourses = [];
+            const courseCheckboxes = form.querySelectorAll(
+                "input[name='courses']:checked"
+            );
+            console.log(files, "files");
+
+            courseCheckboxes.forEach((course) => {
+                selectedCourses.push(course.value);
+            });
+            const formData = new FormData();
+            formData.append("name", name)
+            // files.forEach((file, index) => {
+            //     formData.append(`file[${index}]`, file)
+
+            // })
+            selectedCourses.forEach((selectedCourse, index) => {
+                formData.append(`courses[${index}]`, selectedCourse)
+            })
+
+            console.log(formData, "formData");
+
+            const data = {
+                name,
+                email,
+                password,
+                date,
+                range,
+                color,
+                country,
+                message,
+                subscribe,
+                gender: selectedGender,
+                courses: selectedCourses
+            };
+
+            console.log(data);
+        }
+        // form.addEventListener("click", (event) => {
+        form.addEventListener("submit", callback)
+        form.removeEventListener("submit", callback)
+
+    </script>
+</body>
+
+</html>
